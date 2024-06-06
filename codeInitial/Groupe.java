@@ -5,12 +5,22 @@ public class Groupe {
     private String nom;
     private Professeur professeur;
 
+    /**
+     *
+     * @param numero
+     * @param nom
+     */
     public Groupe(int numero, String nom) {
         this.numero = numero;
         this.nom = nom;
     }
+
+    /**
+     *
+     * @param professeur
+     */
     public void setProfesseur(Professeur professeur) {
-        this.professeur = professeur;
+        this.professeur = Professeur.getInstance(professeur.getCip(), professeur.getNom());
     }
     
 
